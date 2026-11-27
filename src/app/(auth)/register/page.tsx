@@ -22,7 +22,7 @@ export default async function RegisterPage() {
       <CardHeader>
         <CardTitle className="text-xl">Create your account</CardTitle>
         <CardDescription>
-          Join GearUp as a customer to rent gear, or as a provider to list it
+          Join GearUp as a customer to rent gear, or as a provider to list it for others to rent.
         </CardDescription>
       </CardHeader>
       <CardContent>
