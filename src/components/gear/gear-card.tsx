@@ -62,7 +62,7 @@ export function GearCard({ gear }: { gear: GearItem }) {
               ${gear.pricePerDay}
               <span className="text-xs font-normal text-muted-foreground">/day</span>
             </p>
-            <span className="text-xs text-muted-foreground">{gear.stock} in stock</span>
+            <span className="text-xs text-muted-foreground">{gear.stock} in stocks</span>
           </div>
         </CardContent>
       </Card>
