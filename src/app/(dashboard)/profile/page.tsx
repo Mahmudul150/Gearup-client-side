@@ -66,7 +66,7 @@ export default async function ProfilePage() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Profile</h1>
         <p className="text-sm text-muted-foreground">
-          Your account information.
+          Your account informations.
         </p>
       </div>
 
