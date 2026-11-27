@@ -53,7 +53,7 @@ export default async function GearPage({ searchParams }: { searchParams: PageSea
   return (
     <div className="mx-auto max-w-7xl space-y-6 px-4 py-8">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Browse gear</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Browses gear</h1>
         <p className="text-sm text-muted-foreground">
           {gear.total} item{gear.total === 1 ? "" : "s"} found
         </p>
