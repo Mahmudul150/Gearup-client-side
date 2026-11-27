@@ -59,7 +59,7 @@ export function GearCard({ gear }: { gear: GearItem }) {
 
           <div className="flex items-center justify-between">
             <p className="font-bold">
-              ৳{gear.pricePerDay}
+              ${gear.pricePerDay}
               <span className="text-xs font-normal text-muted-foreground">/day</span>
             </p>
             <span className="text-xs text-muted-foreground">{gear.stock} in stock</span>
