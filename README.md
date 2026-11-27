@@ -154,7 +154,7 @@ The frontend provides:
    git clone https://github.com/Mahmudul150/Gearup-client-side.git
 2. Navigate to the Project Directory
    cd Gearup-client-side
-3. Install Dependencies
+3. Install Dependencie
    npm install
 4. Configure Environment Variables
    Create a .env.local file in the project root. Add the backend API base URL using the exact variable name referenced in the frontend source code.
