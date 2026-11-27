@@ -46,6 +46,15 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Design-system tokens extracted from the approved admin overview */
+  --color-surface-glass: var(--ds-surface-glass);
+  --color-border-subtle: var(--ds-border-subtle);
+  --color-border-soft: var(--ds-border-soft);
+  --shadow-panel: var(--ds-shadow-panel);
+  --radius-panel: var(--ds-radius-panel);
+  --radius-tile: var(--ds-radius-tile);
+  --tracking-eyebrow: var(--ds-tracking-eyebrow);
 }
 
 :root {
@@ -81,6 +90,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --ds-surface-glass: color-mix(in oklch, var(--card) 80%, transparent);
+  --ds-border-subtle: color-mix(in oklch, var(--border) 60%, transparent);
+  --ds-border-soft: color-mix(in oklch, var(--border) 70%, transparent);
+  --ds-shadow-panel: 0 1px 2px oklch(0 0 0 / 0.04);
+  --ds-radius-panel: var(--radius-2xl);
+  --ds-radius-tile: var(--radius-xl);
+  --ds-tracking-eyebrow: 0.14em;
 }
 
 .dark {
@@ -126,5 +143,65 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer components {
+  .ds-panel {
+    border-radius: var(--ds-radius-panel);
+    border: 1px solid var(--ds-border-subtle);
+    background-color: var(--ds-surface-glass);
+    box-shadow: var(--ds-shadow-panel);
+  }
+
+  .ds-panel-header {
+    border-bottom: 1px solid var(--ds-border-subtle);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .ds-icon-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2.25rem;
+    block-size: 2.25rem;
+    border-radius: var(--ds-radius-tile);
+    border: 1px solid var(--ds-border-soft);
+    background-color: color-mix(in oklch, var(--muted) 60%, transparent);
+    color: var(--muted-foreground);
+    transition: background-color 200ms, color 200ms;
+  }
+
+  .ds-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--ds-border-soft);
+    background-color: color-mix(in oklch, var(--card) 70%, transparent);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: var(--ds-tracking-eyebrow);
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
+  }
+
+  .ds-stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 640px) {
+  .ds-stat-value {
+    font-size: 2.1rem;
   }
 }
