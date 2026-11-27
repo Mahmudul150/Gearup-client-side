@@ -117,7 +117,7 @@ export default async function CheckoutPage({
         <PayButton rentalId={rental.id} amount={rental.totalPrice} />
         <p className="flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
           <Lock className="size-3.5" aria-hidden />
-          Secured by Stripe — you will be redirected to their checkout page
+          Secured by Stripe — you will be redirected to their checkout pages
         </p>
       </div>
 
