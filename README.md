@@ -211,6 +211,8 @@ View GearUp API Documentation
 📸 Screenshots
 Add screenshots of the actual application to showcase its interface.
 
+Live Link : https://gearupclient-theta.vercel.app/
+
 Suggested screenshots:
 
 - Home Page
