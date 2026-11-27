@@ -10,7 +10,7 @@ export function PaymentToast({ success }: { success: boolean }) {
         description: "Your rental is being confirmed.",
       });
     } else {
-      toast.error("Payment cancelled", {
+      toast.error("Payments cancelled", {
         description: "You can try again anytime.",
       });
     }
