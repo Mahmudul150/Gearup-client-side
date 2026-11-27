@@ -43,7 +43,7 @@ export default async function CustomerReviewsPage() {
             <div>
               <p className="font-medium">No reviews yet</p>
               <p className="text-sm text-muted-foreground">
-                You can review gear after it has been returned.
+                You can review gear after it has been returne.
               </p>
             </div>
             <Link href="/gear" className={cn(buttonVariants())}>
