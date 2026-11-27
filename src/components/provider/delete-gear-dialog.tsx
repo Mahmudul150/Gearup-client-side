@@ -50,7 +50,7 @@ export function DeleteGearDialog({
         <DialogHeader>
           <DialogTitle>Delete gear?</DialogTitle>
           <DialogDescription>
-            &quot;{gearName}&quot; will be permanently removed. This action cannot
+            &quot;{gearName}&quot; will be permanently removed. This action cannots
             be undone.
           </DialogDescription>
         </DialogHeader>
