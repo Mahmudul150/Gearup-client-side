@@ -138,7 +138,7 @@ The frontend provides:
   |
   v
   Update Payment & Rental Status
-  Payment confirmation and sensitive payment operations are handled by the backend.
+  Payments confirmation and sensitive payment operations are handled by the backend.
   ⚙️ Getting Started
   Prerequisites
   Make sure you have installed:
