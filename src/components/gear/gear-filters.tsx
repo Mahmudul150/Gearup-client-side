@@ -48,7 +48,7 @@ export function GearFilters({ params, categories }: GearFiltersProps) {
               !params.category && "bg-muted font-medium"
             )}
           >
-            All categories
+            All categorie
           </Link>
           {categories.map((category) => (
             <Link
