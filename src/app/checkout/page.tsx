@@ -53,7 +53,7 @@ export default async function CheckoutPage({
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Checkout</h1>
         <p className="text-sm text-muted-foreground">
-          Review your rental order before paying
+          Review your rental orders before paying
         </p>
       </div>
 
