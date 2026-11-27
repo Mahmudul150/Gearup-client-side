@@ -27,7 +27,7 @@ export function GearSearch({ params }: GearSearchProps) {
           aria-label="Search gear"
         />
       </div>
-      <Button type="submit">Search</Button>
+      <Button type="submit">Searchs</Button>
     </form>
   );
 }
