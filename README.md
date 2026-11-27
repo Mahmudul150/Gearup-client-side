@@ -1,104 +1,233 @@
 🏕️ GearUp – Sports Gear Rental Platform
-GearUp is a sports and outdoor equipment rental platform designed to make renting sports gear simple and convenient. Customers can explore available equipment, providers can manage their rental products and orders, and administrators can oversee platform activities.
+Rent Sports & Outdoor Gear Instantly
+GearUp is a full-stack sports and outdoor equipment rental platform that connects customers with sports gear providers. Customers can explore available equipment, rent gear, make secure online payments, and manage rental activities. Providers manage inventory and rental orders, while admins oversee users, categories, gear listings, and platform activities.
 
 This repository contains the frontend application of GearUp.
-✨ Project Overview
-GearUp brings customers and equipment providers together through a role-based rental platform.
-Main User Roles
+🌐 Live Links & Repositories
+Resource Link
+🚀 Live Frontend Visit GearUp
+⚙️ Live Backend API Visit Live Server
+📚 API Documentation View Postman Documentation
+💻 Frontend GitHub Gearup-client-side
+🔧 Backend GitHub assigenment--4
 
-- Customer: Browse sports equipment, explore product details, and manage rental activities.
-- Provider: Manage gear listings, inventory, and customer rental orders.
-- Admin: Manage users and monitor platform activities.
-  🚀 Features
-  Customer
-- Browse sports and outdoor equipment.
-- Explore gear details, pricing, and availability.
-- Create and manage rental orders.
-- Complete payments through the integrated payment workflow.
-- Track rental and order status.
-  Provider
-- Create and manage gear listings.
-- Update equipment information and availability.
-- Manage incoming rental orders.
-- Track order status.
-  Admin
-- Manage platform users.
-- Monitor gear listings and rental orders.
-- Manage platform activities.
-  Feature availability may depend on the current backend and frontend implementation.
+📖 Project Overview
+GearUp simplifies renting sports and outdoor equipment through a user-friendly web application.
 
-🛠️ Technology Stack
-Category Technology
-Framework Next.js 16 (App Router)
-UI Library React 19
-Language TypeScript
-Styling Tailwind CSS v4
-UI Components Base UI / shadcn
-Icons Lucide React
-Notifications Sonner
-Theme next-themes
-Authentication Utility jsonwebtoken
+The platform supports three user roles:
 
-📁 Project Repository
+- Customer
+- Provider
+- Admin
+  Customers can browse gear, place rental orders, complete payments, view rental history, and leave reviews. Providers can manage their gear inventory, stock availability, and rental orders. Admins can manage users, categories, gear listings, and rental activities.
+  ✨ Features
+  🌍 Public Features
+- Browse available sports and outdoor gear.
+- Search gear by keyword.
+- Filter by category, brand, and availability.
+- View detailed gear information.
+- Pagination and sorting.
+- Responsive user interface.
+  👤 Customer Features
+- User registration and login.
+- JWT-based authentication.
+- Browse gear and view details.
+- Rent sports and outdoor equipment.
+- View rental history.
+- Complete payments through Stripe.
+- View payment history.
+- Leave gear reviews.
+- Manage personal profile.
+- Access customer dashboard.
+  🏪 Provider Features
+- Provider dashboard.
+- Add, update, and delete gear listings.
+- Manage stock and availability.
+- View customer rental orders.
+- Update rental order status.
+- Manage provider profile.
+  🛡️ Admin Features
+- Admin dashboard.
+- View and manage users.
+- Activate or suspend users.
+- Manage gear categories.
+- View all gear listings.
+- View all rental orders.
+- Monitor platform activities.
+  🛠️ Technology Stack
+  Frontend
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Base UI / shadcn
+- Lucide React
+- Sonner
+- next-themes
+  Backend Integration
+- Node.js
+- Express.js
+- TypeScript
+- REST API
+- PostgreSQL
+- Prisma ORM
+  Authentication
+- JWT Authentication
+- Role-Based Access Control
+- Protected Routes
+  Payment Integration
+- Stripe Checkout
+- Backend Payment Verification
+- Stripe Webhook-based Payment Confirmation
+  📁 Project Structure
+  The application follows a modular Next.js App Router structure. The example below illustrates the high-level organization; exact folders may vary in the current source code.
+  Gearup-client-side/
+  │
+  ├── public/
+  ├── src/
+  │ ├── app/
+  │ │ ├── (auth)/
+  │ │ ├── (dashboard)/
+  │ │ ├── (public)/
+  │ │ ├── layout.tsx
+  │ │ └── page.tsx
+  │ ├── components/
+  │ ├── hooks/
+  │ ├── lib/
+  │ ├── providers/
+  │ ├── services/
+  │ └── types/
+  │
+  ├── next.config.ts
+  ├── package.json
+  └── README.md
+  🔐 Authentication & Authorization
+  GearUp uses JWT-based authentication integrated with the backend REST API.
 
-- Frontend: Gearup-client-side
+The frontend provides:
+
+- Registration and login interfaces.
+- Authenticated user sessions.
+- Protected dashboard routes.
+- Role-based dashboard access.
+- Logout functionality.
+- Access to role-specific features.
+  Supported Roles
+  CUSTOMER
+  PROVIDER
+  ADMIN
+  💳 Payment Integration
+  GearUp integrates Stripe Checkout for rental payments.
+  Payment Workflow
+  Select Gear
+  |
+  v
+  Create Rental Order
+  |
+  v
+  Request Payment Session
+  |
+  v
+  Redirect to Stripe Checkout
+  |
+  v
+  Complete Payment
+  |
+  v
+  Backend Webhook Verification
+  |
+  v
+  Update Payment & Rental Status
+  Payment confirmation and sensitive payment operations are handled by the backend.
   ⚙️ Getting Started
-  Follow these steps to run the frontend project locally.
   Prerequisites
   Make sure you have installed:
 - Node.js (20 or later recommended)
 - npm
 - Git
-  Check your installed versions:
+  Check installed versions:
   node -v
   npm -v
   git --version
 
 1. Clone the Repository
    git clone https://github.com/Mahmudul150/Gearup-client-side.git
-2. Go to the Project Directory
+2. Navigate to the Project Directory
    cd Gearup-client-side
 3. Install Dependencies
    npm install
 4. Configure Environment Variables
-   Create a .env.local file in the project root if your local configuration requires environment variables.
+   Create a .env.local file in the project root. Add the backend API base URL using the exact variable name referenced in the frontend source code.
 
-Add the frontend environment variables used by your application. For example:
-
-# Add the API base URL and other public configuration
-
-# using the exact variable names referenced in your source code.
-
-Never commit private keys, access tokens, passwords, or other secrets to GitHub. 5. Run the Development Server
+Example:
+NEXT*PUBLIC_API_URL=https://assigenment4-three.vercel.app
+Important: NEXT_PUBLIC_API_URL is an example variable name. Confirm the actual name in your source code before using it. If your application uses a different name, use that instead. Never expose database credentials, JWT secrets, Stripe secret keys, webhook secrets, or other private keys through NEXT_PUBLIC* variables. 5. Start the Development Server
 npm run dev
 Open http://localhost:3000 in your browser.
 📜 Available Scripts
 Command Description
-npm run dev Starts the development server
-npm run build Creates an optimized production build
-npm run start Runs the production server
-npm run lint Runs ESLint
+npm run dev Start the development server
+npm run build Create an optimized production build
+npm run start Start the production server
+npm run lint Run ESLint
 
 🏗️ Build for Production
-To create a production build:
+Create a production build:
 npm run build
-After a successful build, start the production server:
+Start the production server:
 npm run start
-🌐 Deployment
-This Next.js application can be deployed using Vercel.
+🚀 Deployment
+The frontend application can be deployed using Vercel.
+Deployment Steps
 
-1. Import the GitHub repository into Vercel.
-2. Configure the required environment variables in the Vercel project settings.
-3. Deploy the application.
-4. Update this README with the live application URL.
-   🔗 Useful Resources
+1. Push the frontend source code to GitHub.
+2. Import the repository into Vercel.
+3. Configure the required frontend environment variables.
+4. Set the production backend API URL.
+5. Deploy the application.
+6. Test authentication, gear browsing, rental orders, dashboards, and payment redirects.
+   Production Links
 
-- Next.js Documentation
-- React Documentation
-- TypeScript Documentation
-- Tailwind CSS Documentation
-- Vercel Documentation
+- Frontend: GearUp Live Website
+- Backend: GearUp Live API
+- API Documentation: Postman API Docs
+  📚 API Documentation
+  The frontend communicates with the GearUp backend through RESTful APIs.
+
+The backend provides endpoints for:
+
+- Authentication
+- User and profile management
+- Categories
+- Gear management
+- Rental orders
+- Payments
+- Reviews
+- Provider operations
+- Admin operations
+  For detailed endpoints, request bodies, response examples, and testing instructions:
+
+View GearUp API Documentation
+📸 Screenshots
+Add screenshots of the actual application to showcase its interface.
+
+Suggested screenshots:
+
+- Home Page
+- Gear Listing Page
+- Gear Details Page
+- Login and Registration
+- Customer Dashboard
+- Provider Dashboard
+- Admin Dashboard
+- Payment Flow
+  Example:
+  ![GearUp Homepage](./public/images/homepage.png)
   👨‍💻 Author
   Mahmudul Hasan
 - GitHub: @Mahmudul150
-  If you find this project useful, consider giving the repository a ⭐.
+  📜 License
+  This project is created for educational purposes.
+  ⭐ If you find this project useful, consider giving the repository a star!
+
+Built with ❤️ by Mahmudul Hasan
